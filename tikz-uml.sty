@@ -4619,7 +4619,7 @@
   \xdef\tikzumlCallBottomSrc{sb-\tikzumlCreateCall@nodeName}%
   %
   \begin{pgfonlayer}{connections}%
-  \draw[tikzuml synchron-msg style, \tikzumlCreateCallDrawColor] (st-\tikzumlCreateCall@nodeName) -- (#3) node[midway, above, font=\tikzumlDefaultFont, text=\tikzumlCreateCallTextColor, name=\tikzumlCreateCall@nodeName-op] {create};%
+  \draw[tikzuml call return style, \tikzumlCreateCallDrawColor] (st-\tikzumlCreateCall@nodeName) -- (#3) node[midway, above, font=\tikzumlDefaultFont, text=\tikzumlCreateCallTextColor, name=\tikzumlCreateCall@nodeName-op] {create};%
   \end{pgfonlayer}%
   %
   \ifnum\thetikzumlCallLevel=0%
