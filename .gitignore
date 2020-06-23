@@ -30,3 +30,5 @@ examples/*.idv
 examples/*.lg
 examples/*.tmp
 examples/*.xref
+*.fls
+*.fdb_latexmk
