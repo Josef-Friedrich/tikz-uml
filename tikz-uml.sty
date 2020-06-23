@@ -4546,6 +4546,7 @@
                                     no ddots/.is if=tikzumlcreatecallNoDDots,%
                                     no ddots=false,%
                                     create text/.initial={create},%
+                                    pos/.initial=0.5,%
                                     .unknown/.code={%
                                       \let\keyname=\pgfkeyscurrentname%
                                       \let\keyvalue=\pgfkeyscurrentvalue%
@@ -4559,6 +4560,7 @@
                                     draw/.get=\tikzumlCreateCallDrawColor, fill/.get=\tikzumlCreateCallFillColor,%
                                     text/.get=\tikzumlCreateCallTextColor,%
                                     create text/.get=\tikzumlCreateCallCreateText,%
+                                    pos/.get=\tikzumlCreateCallCreateTextPos,%
                                     draw obj/.get=\tikzumlCreateCallObjectDrawColor, fill obj/.get=\tikzumlCreateCallObjectFillColor,%
                                     text obj/.get=\tikzumlCreateCallObjectTextColor%
   }%
@@ -4621,7 +4623,7 @@
   \xdef\tikzumlCallBottomSrc{sb-\tikzumlCreateCall@nodeName}%
   %
   \begin{pgfonlayer}{connections}%
-  \draw[tikzuml call return style, \tikzumlCreateCallDrawColor] (st-\tikzumlCreateCall@nodeName) -- (#3) node[midway, above, font=\tikzumlDefaultFont, text=\tikzumlCreateCallTextColor, name=\tikzumlCreateCall@nodeName-op] {\tikzumlCreateCallCreateText};%
+  \draw[tikzuml call return style, \tikzumlCreateCallDrawColor] (st-\tikzumlCreateCall@nodeName) -- (#3) node[pos=\tikzumlCreateCallCreateTextPos, above, font=\tikzumlDefaultFont, text=\tikzumlCreateCallTextColor, name=\tikzumlCreateCall@nodeName-op] {\tikzumlCreateCallCreateText};%
   \end{pgfonlayer}%
   %
   \ifnum\thetikzumlCallLevel=0%
